@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --button-color : hsl(322, 100%, 66%) ;
+    --first : hsl(193, 100%, 96%) ;
+    --second : hsl(192, 100%, 9%) ;
+    --third : hsl(208, 11%, 55%) ;
+}
+
+/* Start Header */
+
+header {
+    min-height: 100vh;
+    background-image: url(../images/bg-hero-desktop.svg) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .container {
+    width: 90%;
+    margin: auto;
+}
+header .container .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header .container .nav .logo img {
+    width: 70%;
+}
+header .container .nav .btn {
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    width: 160px;
+    border: none;
+    outline: none;
+    background-color: var(--button-color);
+    transition: all .5s;
+}
+header .container .nav .btn:hover,
+header .container .section .left .btn:hover {
+    background-color: hsla(322, 100%, 66%, 0.518);
+}
+
+header .container .section .right,
+header .container .section .left {
+    width: 50%;
+}
+
+header .container .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+header .container .section .right img {
+    width: 100%;
+}
+header .container .section .left .btn {
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+    border: none;
+    outline: none;
+    background-color: var(--button-color);
+    transition: all .5s;
+}
+header .container .section .left h1 {
+    width: 400px;
+    margin-bottom: 25px;
+}
+header .container .section .left p {
+    width: 510px;
+    margin-bottom: 25px;
+    color: var(--third);
+}
+
+/* Start Header */
+
+/* Start Second */
+.second {
+    padding: 40px 0;
+}
+.second .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.second .container .card-one .left ,
+.second .container .card-one .right {
+    width: 50%;
+}
+.second .container .card-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.second .container .one .right img,
+.second .container .three .right img,
+.second .container .two .left img {
+    width: 100%;
+}
+
+.second .container .card-one h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.second .container .card-one p {
+    width: 500px;
+    color: var(--third);
+}
+
+
+
+/* End Second */
+
+/* Start Footer */
+.footer {
+    padding: 40px 0;
+    background-color: var(--second);
+    color: white;
+}
+
+.footer .container {
+    width: 90%;
+    margin: auto;
+}
+.footer .container .logo {
+    margin-bottom: 20px;
+    
+}
+
+.footer .container .sections {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .container .sections .one .first {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.footer .container .sections .one .special {
+    align-items: flex-start !important;
+
+}
+.footer .container .sections .one .first p {
+    width: 400px;
+}
+
+.footer .container .sections .two li,
+.footer .container .sections .three li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.footer .container .sections .two li a,
+.footer .container .sections .three li a{
+    text-decoration: none;
+    color: white;
+}
+.footer .container .sections .two li a:hover,
+.footer .container .sections .three li a:hover {
+    border-bottom: 2px solid white;
+}
+.footer .container .sections .four {
+    display: flex;
+    gap: 15px;
+}
+.footer .container .sections .four svg {
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid white;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.footer .container .sections .four svg:hover {
+    color: var(--button-color);
+}
+
+/* End Footer */
+
+
+
+
+
+
+
+@media  (max-width : 1024px) {
+    .second .container .card-one p,
+    header .container .section .left p, 
+    header .container .section .left h1 {
+        width: auto;
+    }
+}
+
+@media  (max-width : 768px) {
+    header .container .section .left h1,
+    header .container .section .left p
+{
+        width: auto;
+    }
+    .second .container .card-one .left,
+    .second .container .card-one .right {
+        width: 100%;
+    }
+    .second .container .card-one {
+        flex-direction: column;
+    }
+
+    .second .container .card-one p,
+    .second .container .card-one h2 {
+        text-align: center;
+        width: auto;
+    }
+    .second .container .one .right ,
+    .second .container .three .right ,
+    .second .container .two .left {
+        order: -1;
+        margin-bottom: 20px;
+    }
+    .footer .container .sections {
+        flex-direction: column;
+    }
+    .footer .container .sections .one,
+    .footer .container .sections .three {
+        margin-bottom: 25px;
+    }
+    .footer .container .sections .four {
+        justify-content: center;
+    }
+
+}
+
+
+
+
+@media  (max-width : 767px) {
+    header .container .section {
+        flex-direction: column;
+    }
+    header .container .section .right,
+    header .container .section .left {
+        width: 100%;
+    }
+    header .container .section .left .btn{
+        margin-bottom: 25px;
+    }
+
+} 
